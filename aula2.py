@@ -104,7 +104,7 @@ n3 = input("Digite o terceiro número: ") # 3
 if n1 > n2:
     if n3 > n1:
         print(f"A ordem crescente dos números é: {n2}, {n1} e {n3}")
-    if n3 < n1:
+    elif n3 < n1:
         if n3 > n2:
             print(f"A ordem crescente dos números é: {n2}, {n3} e {n1}")
         else:
@@ -112,7 +112,7 @@ if n1 > n2:
 else:
     if n3 > n2:
         print(f"A ordem crescente dos números é: {n1}, {n2} e {n3}")
-    if n3 < n2:
+    elif n3 < n2:
         if n3 > n1:
             print(f"A ordem crescente dos números é: {n1}, {n3} e {n2}")
         else:
