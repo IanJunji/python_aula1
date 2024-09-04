@@ -1,4 +1,7 @@
 import math
+
+from numba.cuda.libdevice import float_as_int
+
 """
 palavra = input("Diga uma palavra: ")
 print(f"Você disse '{palavra}'")
@@ -142,7 +145,6 @@ if (l=="a") or  (l=="e") or (l=="i") or (l=="o") or (l=="u"):
     print(f"A letra {l} é uma vogal")
 else:
     print(f"A letra {l} é uma consoante.")
-"""
 
 
 # Exercício 7:
@@ -152,9 +154,66 @@ if nl < 3:
     print(f"Não existe um polígono com apenas {nl} lados.")
 elif nl < 4:
     md = int(input("Um polígono com 3 lados é um triângulo. Agora digite a medida (em cm) dos lados para descobrir a área do seu polígono.\n->"))
-    a = float([(md**2)*math.sqrt(3)]/4)
+    a = float(((md**2)*math.sqrt(3))/4)
     print(f"A área do seu triângulo é {a: .2f}")
 elif nl < 5:
     md = int(input("Um polígono com 4 lados é um quadrado. Agora digite a medida (em cm) dos lados para descobrir a área do seu polígono\n->"))
     a = float(md**2)
     print(f"A área do seu quadrado é {a: .2f}")
+elif nl < 6:
+    print("Um polígono com 5 lados é um pentágono")
+else:
+    print("Polígono não identificado.")
+
+# Exercício 8: complemento do ex 7 acima
+
+
+#Exercício 9:
+
+print("Digite 3 números diferentes para descobrir qual é o maior entre os 3.")
+n1 = int(input("Digite o primeiro número: "))
+n2 = int(input("Digite o segundo número: "))
+n3 = int(input("Digite o terceiro número: "))
+if (n3==n2) or (n3==n1) or (n1==n2):
+    print("Por favor, digite números diferentes.")
+elif n1 > n2:
+    if n3 > n1:
+        print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n3}")
+    else:
+        print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n1}")
+elif n2 > n1:
+    if n3 > n2:
+        print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n3}")
+    else:
+        print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n2}")
+
+# Exercício 10:
+
+print("Digite as medidas do seu triângulo para saber se ele é Equilátero, Isósceles ou Escaleno:")
+l1 = int(input("Digite a medida do primeiro lado: "))
+l2 = int(input("Digite a medida do segundo lado: "))
+l3 = int(input("Digite a medida do terceiro lado: "))
+if l1==l2==l3:
+    print(f"O triangulo de lados {l1}, {l2} e {l3} é equilátero.")
+elif (l1==l2!=l3) or (l1!=l2==l3) or (l1==l3!=l2):
+    print(f"O triangulo de lados {l1}, {l2} e {l3} é isósceles.")
+else:
+    print(f"O triangulo de lados {l1}, {l2} e {l3} é escaleno.")
+
+
+# Exercício 11:
+
+print("Digite o grau dos ângulos internos do seu triângulo para saber se ele é reto, agudo ou obtuso:")
+a1 = int(input("Digite o grau do primeiro ângulo do seu triângulo: "))
+a2 = int(input("Digite o grau do segundo ângulo do seu triângulo: "))
+a3 = int(input("Digite o grau do terceiro ângulo do seu triângulo: "))
+if (a1+a2+a3) != 180:
+    print("Por favor digite corretamente os ângulos do seu triângulo.")
+elif (a1==90) or (a2==90) or (a3== 90):
+    print(f"O triângulo de graus: {a1}, {a2} e {a3} é um triângulo retângulo.")
+elif (a1>90) or (a2>90) or (a3>90):
+    print(f"O triângulo de graus: {a1}, {a2} e {a3} é um triângulo obtusângulo.")
+elif (a1<90) and (a2<90) and (a3<90):
+    print(f"O triângulo de graus: {a1}, {a2} e {a3} é um triângulo acutângulo.")
+
+"""
