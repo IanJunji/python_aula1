@@ -1,7 +1,3 @@
-import math
-
-from numba.cuda.libdevice import float_as_int
-
 """
 palavra = input("Diga uma palavra: ")
 print(f"Você disse '{palavra}'")
@@ -145,7 +141,7 @@ if (l=="a") or  (l=="e") or (l=="i") or (l=="o") or (l=="u"):
     print(f"A letra {l} é uma vogal")
 else:
     print(f"A letra {l} é uma consoante.")
-
+"""
 
 # Exercício 7:
 
@@ -154,7 +150,7 @@ if nl < 3:
     print(f"Não existe um polígono com apenas {nl} lados.")
 elif nl < 4:
     md = int(input("Um polígono com 3 lados é um triângulo. Agora digite a medida (em cm) dos lados para descobrir a área do seu polígono.\n->"))
-    a = float(((md**2)*math.sqrt(3))/4)
+    a = float(((md**2)*(3**(1/2))/4))
     print(f"A área do seu triângulo é {a: .2f}")
 elif nl < 5:
     md = int(input("Um polígono com 4 lados é um quadrado. Agora digite a medida (em cm) dos lados para descobrir a área do seu polígono\n->"))
@@ -165,6 +161,8 @@ elif nl < 6:
 else:
     print("Polígono não identificado.")
 
+
+"""
 # Exercício 8: complemento do ex 7 acima
 
 
