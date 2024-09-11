@@ -241,9 +241,9 @@ elif (a1>90) or (a2>90) or (a3>90):
 elif (a1<90) and (a2<90) and (a3<90):
     print(f"O triângulo de graus: {a1}, {a2} e {a3} é um triângulo acutângulo.")
 
+'''
 
-
-print("Digite 3 números diferentes para descobrir qual é o maior entre os 3.")
+'''print("Digite 3 números diferentes para descobrir qual é o maior entre os 3.")
 n1 = int(input("Digite o primeiro número: "))
 n2 = int(input("Digite o segundo número: "))
 n3 = int(input("Digite o terceiro número: "))
@@ -259,6 +259,32 @@ elif n2 > n1:
         print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n3}")
     else:
         print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n2}")
+'''
+
+
+'''print("Digite 3 números diferentes para descobrir qual é o maior entre os 3.")
+n1 = int(input("Digite o primeiro número: "))
+n2 = int(input("Digite o segundo número: "))
+n3 = int(input("Digite o terceiro número: "))
+if n1 > n2 and n1 > n3:
+    aux = n1
+    n1 = n3
+    n3 = aux
+elif n2 > n3:
+    aux = n2
+    n2 = n3
+    n3 = aux
+if n1 > n2:
+    aux = n1
+    n1 = n2
+    n2 = aux
+
+print(n1, n2, n3)
+
+
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
 
 
@@ -266,12 +292,22 @@ print("Digite 3 números diferentes para descobrir qual é o maior entre os 3.")
 n1 = int(input("Digite o primeiro número: "))
 n2 = int(input("Digite o segundo número: "))
 n3 = int(input("Digite o terceiro número: "))
-if (n1 > n2) and (n1 > n3):
-    print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n1}")
-elif (n2 > n3):
-    print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n2}")
-else:
-    print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n3}")
+maior = n1
+if n2 > maior:
+    maior = n2
+if n3 > maior:
+    maior = n3
+menor = n3
+if n1 < menor:
+    menor = n1
+if n2 < menor:
+    menor = n2
+medio = n1 + n2 + n3 - maior - menor
+
+
+print(menor, medio, maior)
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 n1 = input("Digite o primeiro número: ") # 2
@@ -293,17 +329,14 @@ else:
             print(f"A ordem crescente dos números é: {n1}, {n3} e {n2}")
         else:
             print(f"A ordem crescente dos números é: {n3}, {n1} e {n2}")
-'''
+
 
 
 n1 = int(input("Digite o primeiro número: ")) # 2
 n2 = int(input("Digite o segundo número: "))  # 1
 n3 = int(input("Digite o terceiro número: ")) # 3
-if (n1 > n2 > n3):
-    print(n3, n2, n1)
-elif (n2 > n1 > n3):
-    print(n3, n2, n1)
-elif
+if n1 > n2 and n1 > n3:
+
 
 
 
@@ -322,3 +355,28 @@ else:
         print(f"Quadrado de perímetro {lados * comprimento}")
     else:
         print(f"Pentagono de perímetro {lados * comprimento}")
+
+
+
+a = int(input("numero 1"))
+b = int(input("numero 2"))
+c = int(input("numero 3"))
+
+maior = a
+if b > maior:
+    maior = b
+if c > maior:
+    maior = c
+print(maior)
+
+'''
+
+velo = int(input("Qual era a sua velocidade?\n->"))
+if 80 <= velo <= 100:
+    multa = velo*0.2
+elif velo <= 120:
+    multa = 100*0.2 + velo*0.3
+elif velo <= 150:
+    multa = 100*0.2 + 120*0.3 + velo*0.4
+print(f"O valor da sua multa será de: {multa}.")
+
