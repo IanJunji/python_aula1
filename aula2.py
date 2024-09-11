@@ -1,11 +1,11 @@
-"""
+'''
 palavra = input("Diga uma palavra: ")
 print(f"Você disse '{palavra}'")
 print(type(palavra))
 a = int(input("Diga um número: "))
 b = int(input("Diga outro número: "))
 print(f"A soma entre {a} e {b} é ")
-# ----------------------------------
+# ----------------------------------------------------------------------------------------------------------------------
 frase = "Eu"
 print(frase)
 frase = frase + " " + "Me"
@@ -14,7 +14,7 @@ frase = frase + " " + "chamo"
 print(frase)
 frase = frase + " " + "ian"
 print(frase)
-# -----------------------------------
+# ----------------------------------------------------------------------------------------------------------------------
 a = int(input("Digite um número: "))
 b = int(input("Digite outro número: "))
 print(f"O resultado {a} > {b} é {a>b}")
@@ -23,7 +23,7 @@ print(f"O resultado {a} == {b} é {a==b}")
 print(f"O resultado {a} != {b} é {a!=b}")
 print(f"O resultado {a} >= {b} é {a>=b}")
 print(f"O resultado {a} < {b} é {a<=b}")
-# -----------------------------------
+# ----------------------------------------------------------------------------------------------------------------------
 a = int(input("Digite um número: "))
 b = int(input("Digite outro número: "))
 
@@ -35,7 +35,7 @@ print(f"O resultado de {a}!={b} or {a}<{b}, ou seja {a != b} or {a < b} é {a !=
 print(f"O resultado de {a}>{b} or {a}>={b}, ou seja {a > b} or {a >= b} é {a > b or a >= b}")
 print(f"O resultado de {a}<{b} or {a}=={b}, ou seja {a < b} or {a == b} é {a < b or a == b}")
 print(f"O resultado de {a}=={b} or {a}>{b}, ou seja {a == b} or {a > b} é {a == b or a > b}")
-# -------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------
 a = int(input("Digite um número: "))
 b = int(input("Digite outro número: "))
 
@@ -43,18 +43,20 @@ print(f"O resultado de {a}>{b} and {a}<{b}, ou seja, {a > b} and {a < b} é {a >
 print(f"O resultado de {a}>{b} and {a}>={b}, ou seja, {a > b} and {a >= b} é {a > b and a >= b}")
 print(f"O resultado de {a}<={b} and {a}=={b}, ou seja, {a <= b} and {a == b} é {a <= b and a == b}")
 print(f"O resultado de {a}<{b} and {a}!={b}, ou seja, {a < b} and {a != b} é {a < b and a != b}")
-# ------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------
 idade = int(input("Digite sua idade: "))
 if idade > 17:
     print("Pode dirigir")
 else:
     print("Não pode dirigir")
-# ----------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------
 time = input("Para que time vc torce?\n->")
 if time == "Corinthians":
     print("O maior do Brasil")
 else:
     print("Chora mais")
+
+# ----------------------------------------------------------------------------------------------------------------------
 
 # Exercício 1:
 
@@ -68,6 +70,7 @@ else:
     else:
         print(f"{n2} é o maior número")
 
+# ----------------------------------------------------------------------------------------------------------------------
 
 # Exercício 2:
 
@@ -77,6 +80,8 @@ if ano < 2009:
 else:
     print("Você não pode votar")
 
+# ----------------------------------------------------------------------------------------------------------------------
+
 # Exercício 3:
 
 a = input("Digite sua senha de 4 dígitos:\n->")
@@ -84,6 +89,8 @@ if a == "1234":
     print("Acesso permitido")
 else:
     print("Acesso negado")
+
+# ----------------------------------------------------------------------------------------------------------------------
 
 # Exercício 4:
 
@@ -95,6 +102,19 @@ else:
     pf = a * 0.25
     print(f"O total ficou R${pf}.")
 
+# ......................................................................................................................
+'''
+# exercício 4 versao danilo
+
+qnt = int(input("Digite quantas maçãs você vai querer: "))
+preco = 0.3
+if qnt >= 12:
+    preco = 0.25
+total = qnt*preco
+print(f"O total ficou R${total}.")
+
+# ----------------------------------------------------------------------------------------------------------------------
+'''
 # Exercício 5:
 
 n1 = input("Digite o primeiro número: ") # 2
@@ -117,6 +137,7 @@ else:
         else:
             print(f"A ordem crescente dos números é: {n3}, {n1} e {n2}")
 
+# ----------------------------------------------------------------------------------------------------------------------
 
 # Exercício 6:
 
@@ -141,7 +162,8 @@ if (l=="a") or  (l=="e") or (l=="i") or (l=="o") or (l=="u"):
     print(f"A letra {l} é uma vogal")
 else:
     print(f"A letra {l} é uma consoante.")
-"""
+
+# ----------------------------------------------------------------------------------------------------------------------
 
 # Exercício 7:
 
@@ -162,9 +184,9 @@ else:
     print("Polígono não identificado.")
 
 
-"""
 # Exercício 8: complemento do ex 7 acima
 
+# ----------------------------------------------------------------------------------------------------------------------
 
 #Exercício 9:
 
@@ -185,6 +207,8 @@ elif n2 > n1:
     else:
         print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n2}")
 
+# ----------------------------------------------------------------------------------------------------------------------
+
 # Exercício 10:
 
 print("Digite as medidas do seu triângulo para saber se ele é Equilátero, Isósceles ou Escaleno:")
@@ -198,6 +222,7 @@ elif (l1==l2!=l3) or (l1!=l2==l3) or (l1==l3!=l2):
 else:
     print(f"O triangulo de lados {l1}, {l2} e {l3} é escaleno.")
 
+# ----------------------------------------------------------------------------------------------------------------------
 
 # Exercício 11:
 
@@ -214,4 +239,6 @@ elif (a1>90) or (a2>90) or (a3>90):
 elif (a1<90) and (a2<90) and (a3<90):
     print(f"O triângulo de graus: {a1}, {a2} e {a3} é um triângulo acutângulo.")
 
-"""
+
+
+'''
