@@ -103,7 +103,7 @@ else:
     print(f"O total ficou R${pf}.")
 
 # ......................................................................................................................
-'''
+
 # exercício 4 versao danilo
 
 qnt = int(input("Digite quantas maçãs você vai querer: "))
@@ -114,7 +114,7 @@ total = qnt*preco
 print(f"O total ficou R${total}.")
 
 # ----------------------------------------------------------------------------------------------------------------------
-'''
+
 # Exercício 5:
 
 n1 = input("Digite o primeiro número: ") # 2
@@ -136,6 +136,8 @@ else:
             print(f"A ordem crescente dos números é: {n1}, {n3} e {n2}")
         else:
             print(f"A ordem crescente dos números é: {n3}, {n1} e {n2}")
+
+
 
 # ----------------------------------------------------------------------------------------------------------------------
 
@@ -241,4 +243,82 @@ elif (a1<90) and (a2<90) and (a3<90):
 
 
 
+print("Digite 3 números diferentes para descobrir qual é o maior entre os 3.")
+n1 = int(input("Digite o primeiro número: "))
+n2 = int(input("Digite o segundo número: "))
+n3 = int(input("Digite o terceiro número: "))
+if (n3==n2) or (n3==n1) or (n1==n2):
+    print("Por favor, digite números diferentes.")
+elif n1 > n2:
+    if n3 > n1:
+        print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n3}")
+    else:
+        print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n1}")
+elif n2 > n1:
+    if n3 > n2:
+        print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n3}")
+    else:
+        print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n2}")
+
+
+
+print("Digite 3 números diferentes para descobrir qual é o maior entre os 3.")
+n1 = int(input("Digite o primeiro número: "))
+n2 = int(input("Digite o segundo número: "))
+n3 = int(input("Digite o terceiro número: "))
+if (n1 > n2) and (n1 > n3):
+    print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n1}")
+elif (n2 > n3):
+    print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n2}")
+else:
+    print(f"O maior número entre:\n{n1}, {n2} e {n3}\nÉ o {n3}")
+
+
+n1 = input("Digite o primeiro número: ") # 2
+n2 = input("Digite o segundo número: ")  # 1
+n3 = input("Digite o terceiro número: ") # 3
+if n1 > n2:
+    if n3 > n1:
+        print(f"A ordem crescente dos números é: {n2}, {n1} e {n3}")
+    elif n3 < n1:
+        if n3 > n2:
+            print(f"A ordem crescente dos números é: {n2}, {n3} e {n1}")
+        else:
+            print(f"A ordem crescente dos números é: {n3}, {n2} e {n1}")
+else:
+    if n3 > n2:
+        print(f"A ordem crescente dos números é: {n1}, {n2} e {n3}")
+    elif n3 < n2:
+        if n3 > n1:
+            print(f"A ordem crescente dos números é: {n1}, {n3} e {n2}")
+        else:
+            print(f"A ordem crescente dos números é: {n3}, {n1} e {n2}")
 '''
+
+
+n1 = int(input("Digite o primeiro número: ")) # 2
+n2 = int(input("Digite o segundo número: "))  # 1
+n3 = int(input("Digite o terceiro número: ")) # 3
+if (n1 > n2 > n3):
+    print(n3, n2, n1)
+elif (n2 > n1 > n3):
+    print(n3, n2, n1)
+elif
+
+
+
+
+
+lados = int(input("Diga a qnt de lados: "))
+if lados < 3:
+    print("nao é um poligono")
+elif lados > 5:
+    print("poligono nao identificado")
+else:
+    comprimento = float(input("Diga o tamanho dos lados: "))
+    if lados == 3:
+        print(f"Triangulo de perímetro {lados*comprimento}")
+    elif lados == 4:
+        print(f"Quadrado de perímetro {lados * comprimento}")
+    else:
+        print(f"Pentagono de perímetro {lados * comprimento}")
