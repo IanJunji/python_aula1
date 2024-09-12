@@ -369,7 +369,7 @@ if c > maior:
     maior = c
 print(maior)
 
-'''
+
 
 velo = int(input("Qual era a sua velocidade?\n->"))
 if 80 <= velo <= 100:
@@ -379,4 +379,46 @@ elif velo <= 120:
 elif velo <= 150:
     multa = 100*0.2 + 120*0.3 + velo*0.4
 print(f"O valor da sua multa será de: {multa}.")
+
+'''
+
+print("Digite quatro números que dejesa colocar em ordem cresccente")
+n1 = int(input("Primeiro número: "))
+n2 = int(input("Segundo número: "))
+n3 = int(input("Terceiro número: "))
+n4 = int(input("Quarto número: "))
+# suposição
+maior = n1
+if n2 > maior:
+    maior = n2
+if n3 > maior:
+    maior = n3
+if n4 > maior:
+    maior = n4
+# suposição tbm
+menor = n1
+if n2 < menor:
+    menor = n2
+if n3 < menor:
+    menor = n3
+if n4 < menor:
+    menor = n4
+# calculo resto para depois descobrir valor de medio1 e medio2
+resto = (n1+n2+n3+n4) - maior - menor
+if n1 != maior and n1 != menor:
+    medio1 = n1
+elif n2 != maior and n2 != menor:
+    medio1 = n2
+elif n3 != maior and n3 != menor:
+    medio1 = n3
+else:
+    medio1 = n4
+# calculo do outro medio e caso esteja em ordem errada, trocar valores de medio1 com medio2 para ficar em ordem crescente
+medio2 = resto - medio1
+if medio1 > medio2:
+    aux = medio1
+    medio1 = medio2
+    medio2 = aux
+# print em ordem que servira para qualquer número
+print(menor, medio1, medio2, maior)
 
