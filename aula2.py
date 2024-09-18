@@ -1,4 +1,4 @@
-'''
+
 palavra = input("Diga uma palavra: ")
 print(f"Você disse '{palavra}'")
 print(type(palavra))
@@ -380,7 +380,7 @@ elif velo <= 150:
     multa = 100*0.2 + 120*0.3 + velo*0.4
 print(f"O valor da sua multa será de: {multa}.")
 
-'''
+
 
 print("Digite quatro números que dejesa colocar em ordem cresccente")
 n1 = int(input("Primeiro número: "))
