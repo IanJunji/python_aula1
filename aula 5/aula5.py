@@ -119,10 +119,12 @@ while i < 6:
             soma += n1
             i += 1
             break
+        else:
+            print("Valor invalido.")
 media = soma/5
 print(f"soma {soma} e media {media}")
 
-"""
+
 
 # Exercicio 5
 
@@ -130,7 +132,7 @@ while True:
     n1 = input("Digite um número: ")
     if n1.isnumeric():
         n1 = int(n1)
-
+        break
     else:
         print("valor invalido")
 while True:
@@ -147,4 +149,131 @@ maior = n1
 if n2 > maior:
     maior = n2
 
-while (menor + 1) 
+while (menor + 1) < maior:
+    menor = menor + 1
+    print(menor)
+
+
+
+# Exercicio 6
+
+user = input("Digite seu novo nome de usuário.\n->")
+senha = input("Digite sua nova senha.\n->")
+while user == senha:
+    print("O usuario e senha nao podem ser iguais.")
+    user = input("Digite novamente seu nome de usuário.\n->")
+    senha = input("Digite sua nova senha diferente do seu user.\n->")
+print("Cadastro realizado.")
+
+
+
+# Exercicio 7
+
+while True:
+    num = input("Digite o número que deseja saber a tabuada.\n-> ")
+    if num.isnumeric():
+        num = int(num)
+        i = 0
+        while i <= 10:
+            tb = num * i
+            i += 1
+            print(tb)
+        break
+
+
+
+# Exercicio 8
+
+n1 = 0
+n2 = 1
+fila = 0
+while True:
+    serie = input("Digite até qual serie da sequencia de fibonacci deseja saber. \n-> ")
+    if serie.isnumeric():
+        serie = int(serie)
+        while fila <= serie:
+            fila += 1
+            aux = n2
+            n2 = n2 + n1
+            n1 = aux
+            print(n1)
+    else:
+        print("Digite um valor valido, por favor")
+    break
+
+
+# Exerccicio 9
+
+i = 0
+pares = 0
+while i < 10:
+    i += 1
+    num = int(input(f"Digite o {i}° número: "))
+    if num % 2 == 0:
+        pares = pares + 1
+print(f"Tem {pares} pares e {10 - pares} ímpares.")
+
+
+# Exercicio 10
+
+while True:
+    num = input("Digite o número que deseja descobrir seu fatorial: ")
+    if num.isnumeric():
+        num = int(num)
+        aux = num - 1
+        while aux > 0:
+            num = num * aux
+            aux = aux - 1
+        print(num)
+    else:
+        print("Valor invalido, tente novamente")
+    break
+
+
+
+# Exercicio 11
+
+n1 = 1
+while True:
+    n2 = input("Digite o número que deseja sabe se é primo ou não: ")
+    if n2.isnumeric():
+        n2 = int(n2)
+        if n2 > 2:
+            while n1 < n2-1:
+                n1 += 1
+                if n2 % n1 == 0:
+                    print(f"O número {n2} não é primo.")
+                    break
+            else:
+                print(f"O número {n2} é primo.")
+        else:
+            print(f"O número {n2} é primo.")
+            break
+    else:
+        print("Valor invalido. tente novamente")
+"""
+
+# Exercicio 12
+
+i = 0
+soma = 0
+while True:
+    qnt_not = input("Deseja descobrir a media de quantas notas?\n->")
+    if qnt_not.isnumeric():
+        qnt_not = int(qnt_not)
+        break
+    else:
+        print("Por favor insira um valor valido.")
+while i < qnt_not:
+    while True:
+        i += 1
+        nota = input(f"Digite a {i}ª nota: ")
+        if nota.isnumeric():
+            nota = int(nota)
+            soma +=  nota
+            break
+        else:
+            i -= 1
+            print("Por favor insira um valor valido.")
+media = soma/qnt_not
+print(f"A media das {qnt_not} notas é {media}")
