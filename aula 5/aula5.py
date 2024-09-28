@@ -251,7 +251,7 @@ while True:
             break
     else:
         print("Valor invalido. tente novamente")
-"""
+
 
 # Exercicio 12
 
@@ -277,3 +277,96 @@ while i < qnt_not:
             print("Por favor insira um valor valido.")
 media = soma/qnt_not
 print(f"A media das {qnt_not} notas é {media}")
+
+
+
+from aula2 import total
+
+# Exercicio 13
+
+ano = 1995
+while True:
+    salin = input("Qual o seu Salário? \n->")
+    if salin.isnumeric():
+        salin = int(salin)
+        break
+    else:
+        print("Valor invalido, tente novamente.")
+aumento = salin*0.015
+while ano < 2024:
+    ano += 1
+    salin = salin + aumento
+    aumento = aumento*2
+    print(f"salario = {salin: .2f}")
+    print(f"aumento = {aumento: .2f}")
+print(f"{salin: .2f}")
+
+
+
+# Exerciciio 14
+i = 0
+inter1 = 0
+inter2 = 0
+inter3 = 0
+inter4 = 0
+while True:
+    i += 1
+    num = input(f"Digite o {i}° número ou 'encerrar' para finalizar o promgrama.\n->")
+    if num == "encerrar":
+        break
+    elif num.isnumeric():
+        num = int(num)
+        if num < 0:
+            break
+        else:
+            if num <= 25:
+                inter1 += 1
+            elif num <=50:
+                inter2 += 1
+            elif num <= 75:
+                inter3 += 1
+            elif num <= 100:
+                inter4 += 1
+    else:
+        i -= 1
+        print("Valor invalido, por favor digite novamente.")
+print(f"Tem {inter1} números entre [0-25], {inter2} números entre [26-50], {inter3} números entre [51-75] e {inter4} números entre [76-100].")
+
+"""
+
+# Exercicio 15
+
+cand1 = 0
+cand2 = 0
+cand3 = 0
+cand4 = 0
+nulo = 0
+branco = 0
+
+while True:
+    voto = input("Olá, qual opção deseja votar?\n1 - Rafaela\n2 - Mel\n3 - Baruc\n4 - Mika\n5 - Voto nulo\n6 - Voto em branco\n 0 - finalizar eleição\n->")
+    if not (voto == "1" or voto == "2" or voto == "3" or voto == "4" or voto == "5" or voto == "6" or voto == "0"):
+        print("Valor invalido, por favor digite novamente")
+    else:
+        voto = int(voto)
+        if voto == 1:
+            cand1 += 1
+        elif voto == 2:
+            cand2 += 1
+        elif voto == 3:
+            cand3 += 1
+        elif voto == 4:
+            cand4 += 1
+        elif voto == 5:
+            nulo += 1
+        elif voto == 6:
+            branco += 1
+        else:
+            break
+print(f"A tabela de votos ficou:\n"
+      f"Rafaela: {cand1}.\n"
+      f"Mel: {cand2}.\n"
+      f"Baruc: {cand3}.\n"
+      f"Mika: {cand4}.\n"
+      f"Votos nulos: {nulo}.\n"
+      f"Votos brancos: {branco}.")
