@@ -1,4 +1,4 @@
-"""
+
 i = 0
 pares = 0
 impares = 0
@@ -332,7 +332,7 @@ while True:
         print("Valor invalido, por favor digite novamente.")
 print(f"Tem {inter1} números entre [0-25], {inter2} números entre [26-50], {inter3} números entre [51-75] e {inter4} números entre [76-100].")
 
-"""
+
 
 # Exercicio 15
 
@@ -370,3 +370,4 @@ print(f"A tabela de votos ficou:\n"
       f"Mika: {cand4}.\n"
       f"Votos nulos: {nulo}.\n"
       f"Votos brancos: {branco}.")
+
