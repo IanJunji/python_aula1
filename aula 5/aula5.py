@@ -54,7 +54,6 @@ idade = int(input("Agora digite sua idade: "))
 while idade < 0 or idade > 150:
     print("valor invalido")
     idade = int(input("Digite novamente"))
-salario =
 
 
 # Exercicio 2 correcao
