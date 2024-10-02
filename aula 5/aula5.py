@@ -1,4 +1,4 @@
-
+"""
 i = 0
 pares = 0
 impares = 0
@@ -58,7 +58,7 @@ while idade < 0 or idade > 150:
 
 # Exercicio 2 correcao
 
-nome = input("Digite seu nome")
+nome = input("Digite seu nome: ")
 while len(nome) < 3:
     print("nome invalido")
     nome = input("Digite novamente: ")
@@ -66,7 +66,7 @@ while True:
     idade = input("Digite sua idade: ")
     if idade.isnumeric():
         idade = int(idade)
-        if idade < 151 and idade > -1:
+        if idade < 151 and idade > 0:
             break
         print("Valor invalido")
     else:
@@ -84,12 +84,24 @@ sexo = input("Qual o seu sexo?\n f: feminino\n m: masculino\n->")
 while sexo != "f" and sexo != "m":
     print("Valor invalido")
     sexo = input("Digite novamente: ")
+if sexo == "f":
+    sexo = "mulher"
+else:
+    sexo = "homem"
 ec = input("Qual seu estado civil? \n s: solteiro(a) \n c: casado(a) \n v: viuvo(a) \n d: divorciado(a) \n ->")
 while not (ec == "s" or ec == "c" or ec == "v" or ec == "d"):
     print("Valor invalido")
     ec = input("Digite novamente: ")
+if ec == "s":
+    ec = "solteiro(a)"
+elif ec == "c":
+    ec = "casado(a)"
+elif ec == "v":
+    ec = "viuvo(a)"
+else:
+    ec = "divorciado(a)"
 
-
+print(f"O seu nome é {nome}, vc tem {idade} anos, seu salario é de R${salario}, vc é {sexo} e seu estado civil é {ec}. ")
 
 # Exercicio 3
 
@@ -190,12 +202,12 @@ while True:
     serie = input("Digite até qual serie da sequencia de fibonacci deseja saber. \n-> ")
     if serie.isnumeric():
         serie = int(serie)
-        while fila <= serie:
-            fila += 1
+        while fila < serie:
             aux = n2
             n2 = n2 + n1
             n1 = aux
-            print(n1)
+            print(n1, end= " ")
+            fila += 1
     else:
         print("Digite um valor valido, por favor")
     break
@@ -213,20 +225,25 @@ while i < 10:
 print(f"Tem {pares} pares e {10 - pares} ímpares.")
 
 
+
+
 # Exercicio 10
 
 while True:
     num = input("Digite o número que deseja descobrir seu fatorial: ")
     if num.isnumeric():
+        print(f"O fatorial de {num} é: {num}", end=" ")
         num = int(num)
         aux = num - 1
         while aux > 0:
+            print(f"* {aux}", end=" ")
             num = num * aux
-            aux = aux - 1
-        print(num)
+            aux -= 1
+        print(f"= {num}")
     else:
         print("Valor invalido, tente novamente")
     break
+"""
 
 
 
@@ -238,19 +255,22 @@ while True:
     if n2.isnumeric():
         n2 = int(n2)
         if n2 > 2:
-            while n1 < n2-1:
+            while n1 < n2**(1/2):
                 n1 += 1
                 if n2 % n1 == 0:
                     print(f"O número {n2} não é primo.")
                     break
             else:
                 print(f"O número {n2} é primo.")
+                break
         else:
             print(f"O número {n2} é primo.")
             break
     else:
         print("Valor invalido. tente novamente")
 
+
+"""
 
 # Exercicio 12
 
@@ -370,3 +390,22 @@ print(f"A tabela de votos ficou:\n"
       f"Votos nulos: {nulo}.\n"
       f"Votos brancos: {branco}.")
 
+
+
+a = 1
+aux = 1
+while a <= 10:
+    if aux == 1:
+        print(f"Tabuada do {a}")
+        tb = a * aux
+        print(f"{a}*{aux} = {tb}")
+    elif aux <= 10:
+        tb = a * aux
+        print(f"{a}*{aux} = {tb}")
+    else:
+        print()
+        a +=1
+        aux = 0
+    aux += 1
+
+"""
