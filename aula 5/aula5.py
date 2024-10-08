@@ -159,7 +159,6 @@ if n2 < menor:
 maior = n1
 if n2 > maior:
     maior = n2
-
 while (menor + 1) < maior:
     menor = menor + 1
     print(menor)
