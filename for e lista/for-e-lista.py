@@ -66,7 +66,6 @@ lista = []
 for i in range(10):
     lista.append(i)
     print(lista)
-'''
 
 
 def checa_numero(msg):
@@ -77,3 +76,20 @@ def checa_numero(msg):
 
 ano = checa_numero("Diga seu ano de nascimento: ")
 qnt = checa_numero("Diga a qnt de garrafas: ")
+'''
+
+def media_notas(notas):
+    soma = 0
+    for num in notas:
+        soma += num
+    media = soma/len(notas)
+    return media
+
+lista = [0, 8, 5, 9, 10, 7, 3]
+media = media_notas(lista)
+print(media)
+
+lista_2 = [10, 4, 3, 5, 8, 9, 1]
+media2 = media_notas(lista_2)
+print(media2)
+
